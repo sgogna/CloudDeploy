@@ -1,0 +1,21 @@
+<project name="copy.cloud.env" basedir=".">
+<property name="hudson.dir" value="/opt/hudson"/>
+<target name="replicate.cloud" description="copy int env to cloud">
+	<exec executable="/bin/bash">
+		<arg value="cloudReplicate.sh"/>
+		<arg value="${sourceInstance}"/>
+		<arg value="${cloudServerDns}"/>
+		<arg value="${storefronts}"/>
+		<arg value="${staticContent}"/>
+		<arg value="${generateResources}"/>
+		<arg value="${copySchema}"/>
+		<arg value="${backupWebapps}"/>
+		<arg value="${dbBox}"/>
+		<arg value="${airlines}"/>
+		<arg value="${deploy}"/>
+		<arg value="${deployWar}"/>
+		<arg value="${runDataLoader}"/>
+		<arg value="${cleanEnviorment}"/>
+	</exec>
+</target>
+</project>
